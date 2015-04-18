@@ -11,7 +11,9 @@ module EnumerateIt
       values_hash = args.first.is_a?(Hash) ? args.first : args.inject({}) { |h, v| h[v] = v.to_s; h }
 
       register_enumeration normalize_enumeration(values_hash)
-      values_hash.each_pair { |value_name, attributes| define_enumeration_constant value_name, attributes[0] }
+      values_hash.each_pair do |value_name, attributes|
+        define_enumeration_constant value_name, attributes[0]
+      end
     end
 
     def self.sort_by(sort_mode)
@@ -47,7 +49,7 @@ module EnumerateIt
     end
 
     def self.to_json
-      sorted_map.map { |k, v| { :value => v[0], :label => translate(v[1]) } }.to_json
+      sorted_map.map { |k, v| { value: v[0], label: translate(v[1]) } }.to_json
     end
 
     def self.t(value)

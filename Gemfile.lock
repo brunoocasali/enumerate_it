@@ -2,19 +2,19 @@ PATH
   remote: .
   specs:
     enumerate_it (1.2.6)
-      activesupport (>= 3.0.0)
+      activesupport (= 4.2.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (4.2.1)
-      activesupport (= 4.2.1)
+    activemodel (4.2.0)
+      activesupport (= 4.2.0)
       builder (~> 3.1)
-    activerecord (4.2.1)
-      activemodel (= 4.2.1)
-      activesupport (= 4.2.1)
+    activerecord (4.2.0)
+      activemodel (= 4.2.0)
+      activesupport (= 4.2.0)
       arel (~> 6.0)
-    activesupport (4.2.1)
+    activesupport (4.2.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -57,9 +57,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (>= 3.0.5)
+  activerecord (= 4.2.0)
   enumerate_it!
   pry
   pry-nav
   rake
-  rspec (>= 2.5.0)
+  rspec (= 3.2)
